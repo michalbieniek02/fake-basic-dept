@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components {
+    .slider-content::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .slider-content {
+      scrollbar-width: none;
+    }
+    
+    .slider-container {
+      -ms-overflow-style: none;
+    }
+  }
