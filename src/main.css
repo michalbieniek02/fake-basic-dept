@@ -1,6 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.custom-shadow:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 black;
+}
+
 @layer components {
     .slider-content::-webkit-scrollbar {
       display: none;
@@ -14,3 +20,5 @@
       -ms-overflow-style: none;
     }
   }
+
+  
