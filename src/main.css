@@ -7,6 +7,41 @@
   box-shadow: inset 0 -100px 0 0 black;
 }
 
+.nav-group {
+  display: inline-block;
+  position: relative;
+  color: white;
+}
+
+.slider-content, .slider-content * {
+  user-select: none;
+}
+
+.custom-underline {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  background: white;
+  height: 2px;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-group:hover .custom-underline {
+  width: 100%;
+}
+
+.slider-content {
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  cursor: grab;
+}
+
+.slider-content:active {
+  cursor: grabbing;
+}
+
+
 @layer components {
     .slider-content::-webkit-scrollbar {
       display: none;

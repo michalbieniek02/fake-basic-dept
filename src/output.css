@@ -566,6 +566,10 @@ video {
   position: absolute;
 }
 
+.relative {
+  position: relative;
+}
+
 .left-0 {
   left: 0px;
 }
@@ -729,10 +733,6 @@ video {
   width: 90%;
 }
 
-.w-auto {
-  width: auto;
-}
-
 .w-full {
   width: 100%;
 }
@@ -858,11 +858,6 @@ video {
   background-color: rgb(37 36 34 / var(--tw-bg-opacity));
 }
 
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
 .fill-white {
   fill: #fff;
 }
@@ -976,16 +971,6 @@ video {
   text-decoration-line: underline;
 }
 
-.opacity-0 {
-  opacity: 0;
-}
-
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 .transition-shadow {
   transition-property: box-shadow;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1006,21 +991,53 @@ video {
   transition-duration: 500ms;
 }
 
-.ease-out {
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
-
-.ease-linear {
-  transition-timing-function: linear;
-}
-
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ease-out {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
 .custom-shadow:hover {
   color: white;
   box-shadow: inset 0 -100px 0 0 black;
+}
+
+.nav-group {
+  display: inline-block;
+  position: relative;
+  color: white;
+}
+
+.slider-content, .slider-content * {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.custom-underline {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  background: white;
+  height: 2px;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-group:hover .custom-underline {
+  width: 100%;
+}
+
+.slider-content {
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  cursor: grab;
+}
+
+.slider-content:active {
+  cursor: grabbing;
 }
 
 .hover\:mr-3:hover {
@@ -1031,14 +1048,8 @@ video {
   gap: 0.25rem;
 }
 
-.hover\:bg-black:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+.active\:border-none:active {
+  border-style: none;
 }
 
 .group:hover .group-hover\:scale-100 {
@@ -1055,10 +1066,6 @@ video {
 
 .group:hover .group-hover\:underline {
   text-decoration-line: underline;
-}
-
-.group:hover .group-hover\:opacity-100 {
-  opacity: 1;
 }
 
 @media (min-width: 768px) {
