@@ -578,14 +578,6 @@ video {
   inset: 0px;
 }
 
-.top-0 {
-  top: 0px;
-}
-
-.-z-10 {
-  z-index: -10;
-}
-
 .z-10 {
   z-index: 10;
 }
@@ -668,10 +660,6 @@ video {
   margin-top: 0.75rem;
 }
 
-.mt-\[70\%\] {
-  margin-top: 70%;
-}
-
 .mt-\[20\%\] {
   margin-top: 20%;
 }
@@ -702,8 +690,8 @@ video {
   height: 8rem;
 }
 
-.h-12 {
-  height: 3rem;
+.h-20 {
+  height: 5rem;
 }
 
 .h-3 {
@@ -724,14 +712,6 @@ video {
 
 .h-\[50px\] {
   height: 50px;
-}
-
-.h-24 {
-  height: 6rem;
-}
-
-.h-20 {
-  height: 5rem;
 }
 
 .h-full {
@@ -758,8 +738,8 @@ video {
   width: 20%;
 }
 
-.w-\[60vw\] {
-  width: 60vw;
+.w-\[40vw\] {
+  width: 40vw;
 }
 
 .w-\[80\%\] {
@@ -777,22 +757,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[50vw\] {
-  width: 50vw;
-}
-
-.w-\[40vw\] {
-  width: 40vw;
-}
-
-.w-\[90vw\] {
-  width: 90vw;
-}
-
-.w-\[vw\] {
-  width: vw;
 }
 
 .min-w-\[250px\] {
@@ -845,10 +809,6 @@ video {
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.cursor-crosshair {
-  cursor: crosshair;
 }
 
 .cursor-pointer {
@@ -912,10 +872,6 @@ video {
   overflow: scroll;
 }
 
-.overflow-y-clip {
-  overflow-y: clip;
-}
-
 .rounded {
   border-radius: 0.25rem;
 }
@@ -956,6 +912,11 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-customDarkGray {
+  --tw-bg-opacity: 1;
+  background-color: rgb(25 25 24 / var(--tw-bg-opacity));
+}
+
 .bg-customGray {
   --tw-bg-opacity: 1;
   background-color: rgb(37 36 34 / var(--tw-bg-opacity));
@@ -971,19 +932,9 @@ video {
   background-color: rgb(249 205 205 / var(--tw-bg-opacity));
 }
 
-.bg-gray-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-customDarkGray {
-  --tw-bg-opacity: 1;
-  background-color: rgb(25 25 24 / var(--tw-bg-opacity));
 }
 
 .fill-black {
@@ -1003,11 +954,6 @@ video {
      object-fit: cover;
 }
 
-.object-center {
-  -o-object-position: center;
-     object-position: center;
-}
-
 .p-1 {
   padding: 0.25rem;
 }
@@ -1020,16 +966,8 @@ video {
   padding: 1rem;
 }
 
-.p-12 {
-  padding: 3rem;
-}
-
 .p-5 {
   padding: 1.25rem;
-}
-
-.p-10 {
-  padding: 2.5rem;
 }
 
 .px-10 {
@@ -1055,10 +993,6 @@ video {
 .py-24 {
   padding-top: 6rem;
   padding-bottom: 6rem;
-}
-
-.pr-24 {
-  padding-right: 6rem;
 }
 
 .pt-4 {
@@ -1142,14 +1076,14 @@ video {
   color: rgb(249 205 205 / var(--tw-text-opacity));
 }
 
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .text-footerTxt {
   --tw-text-opacity: 1;
   color: rgb(87 87 87 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -1203,6 +1137,11 @@ section{
 .custom-shadow:hover {
   color: white;
   box-shadow: inset 0 -100px 0 0 black;
+}
+
+.custom-shadow-dark:hover{
+  color: black;
+  box-shadow: inset 0 -100px 0 0 #F9CDCD;
 }
 
 .nav-group {
@@ -1465,10 +1404,6 @@ section{
 
   .xl\:hidden {
     display: none;
-  }
-
-  .xl\:h-1 {
-    height: 0.25rem;
   }
 
   .xl\:w-\[40vw\] {

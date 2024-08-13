@@ -11,6 +11,11 @@ section{
   box-shadow: inset 0 -100px 0 0 black;
 }
 
+.custom-shadow-dark:hover{
+  color: black;
+  box-shadow: inset 0 -100px 0 0 #F9CDCD;
+}
+
 .nav-group {
   display: inline-block;
   position: relative;
