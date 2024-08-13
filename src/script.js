@@ -54,6 +54,7 @@ document.addEventListener('scroll', () => {
     const button1 = document.getElementById('btn1')
     const button2 = document.getElementById('btn2')
     const logo = document.getElementById('logo')
+    const menu = document.getElementById('menu')
     const body = document.body;
     
 
@@ -65,11 +66,12 @@ document.addEventListener('scroll', () => {
     const rect6 = section6.getBoundingClientRect();
 
     if (rect1.top <= 0 && rect1.bottom >= 0) {
-        navbar.classList.add('bg-black', 'text-white');
+        navbar.classList.add( 'text-white');
         navbar.classList.remove('bg-white', 'text-black', 'bg-darkBg');
         logo.classList.add('fill-white');
         logo.classList.remove('fill-black');
         changeLinkColor('white');
+        
 
     } else if ((rect2.top <= 0 && rect2.bottom >= 0) ||
                (rect3.top <= 0 && rect3.bottom >= 0) ||
@@ -128,4 +130,5 @@ function changeLinkColor(color) {
     underlines.forEach((underline)=>{
         underline.style.background = color;
     })
+    menu.style.color = color
 }

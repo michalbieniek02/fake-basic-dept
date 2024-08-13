@@ -7,10 +7,10 @@
     <link href="./output.css" rel="stylesheet">
 </head>
 <body class="transition-colors duration-300">
-    <section id="section1">
+    <section id="section1" class="relative h-screen overflow-hidden">
         <header>
-            <div class="cursor-crosshair overflow-auto object-center">
-                <video class="absolute top-0 -z-10 min-w-[250px] overflow-y-clip w-full" autoplay loop muted>
+            <div class="absolute inset-0 overflow-hidden">
+                <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted>
                     <source src="assets/reel.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
@@ -67,13 +67,14 @@
                         </a>
                     </div>
                 </div>
-                
-                <div class="hidden xl:flex  text-4xl -translate-y-5 h-5 group cursor-pointer ">
-                    <button class="mr-5 w-8 group-hover:w-10 group-hover:mr-3 flex justify-between transition-all ease-in  ">
-                        <span>.</span><span>.</span><span>.</span>
-                    </button> 
+                <div id="menu">
+                    <div class="hidden xl:flex  text-4xl -translate-y-5 h-5 group cursor-pointer ">
+                        <button class="mr-5 w-8 group-hover:w-10 group-hover:mr-3 flex justify-between transition-all ease-in  ">
+                            <span>.</span><span>.</span><span>.</span>
+                        </button> 
+                    </div>
+                    <span class="block group xl:hidden pt-4 md:pt-0 mx-10">MENU</span>
                 </div>
-                <span class="block group xl:hidden pt-4 md:pt-0 mx-10">MENU</span>
                 </div>
             </nav>
         </header>
@@ -341,16 +342,62 @@
                 </ul>
         </section>
         <script src="script.js"></script>
-        <footer class="w-full bg-customGray text-white p-24 mt-10 ">
-            <div>
-                <iframe src="assets/footerSvg.svg"></iframe>
-                
-                <h1>● STAY IN THE KNOW</h1>
-                <div class="flex">
-                    <input type="text" placeholder="Email Address" class="p-1 bg-customGray border-b-2 border-b-white ">
-                <img src="assets/white-arrow.svg " width="20" height="20" alt="" class="cursor-pointer fill-white">
+        <footer class="w-full bg-customGray text-white  xl:mt-10 ">
+            <div class="p-24">
+                <div class="xl:grid xl:grid-cols-2">
+                    <div class="w-[100vw]xl:w-[40vw] mt-12">
+                        <iframe src="assets/footerSvg.svg"></iframe>
+                        <h1>● STAY IN THE KNOW</h1>
+                        <div class="flex">
+                            <input type="text" placeholder="Email Address" class="p-1 bg-customGray border-b-2 border-b-white w-[80%]  ">
+                            <img src="assets/white-arrow.svg " width="20" height="20" alt="" class="cursor-pointer fill-white">
+                        </div>
+                       
+                    </div>
+                    <div class="block text-3xl w-[40vw] mt-12 xl:mt-0">
+                        <h1>We collaborate with abicious brands and people.</h1>
+                        <h1 class="mb-10">Let's build. <span class="underline">biz@basicagency.com</span></h1>
+                        <div class="list-item list-none xl:grid xl:grid-cols-3">
+                            <div class="list-item list-none text-xl mb-12 xl:mb-0 ">
+                                <h1 class="my-5">● SOCIAL</h1>
+                                <div class="text-base font-light">
+                                    <div><a class="hover:underline" href="https://www.instagram.com/basicagency">Instagram</a></div>
+                                    <div><a class="hover:underline" href="https://twitter.com/basicagency">Twitter</a></div>
+                                    <div><a class="hover:underline" href="https://www.linkedin.com/company/basic-agency">LinkedIn</a></div>
+                                    <div><a class="hover:underline" href="https://www.facebook.com/basicagency">Facebook</a></div>
+                                </div>
+                            </div>
+                            <div class="list-item list-none text-xl">
+                                <h1 class="my-5">● INITIATIVES</h1>
+                                <div class="text-base font-light">
+                                    <div><a class="hover:underline" href="https://experiencecrafted.com/">Crafted</a></div>
+                                    <div><a class="hover:underline" href="https://www.basicagency.com/thinking/category/applied">Applied</a></div>
+                                    <div><a class="hover:underline" href="https://www.basicagency.com/thinking/category/brandbeats">Brandbeats</a></div>
+                                    <div><a class="hover:underline" href="https://moves.basicagency.com/">Moves</a></div>
+                                    <div><a class="hover:underline" href="https://www.basicagency.com/blog/b-good-initiative-youth-outreach-community-impact-creativity-bipoc">B&copy;/Good</a></div>
+                                </div>
+                            </div>
+                            <div class="list-item list-none text-xl">
+                                <h1 class="my-5">● OFFICES</h1>
+                                <div class="text-base font-light">
+                                    <div><a class="hover:underline" href="https://www.basicagency.com/contact">San Diego - CA</a></div>
+                                    <div><a class="hover:underline" href="https://www.basicagency.com/contact">New York - NY</a></div>
+                                    <div><a class="hover:underline" href="https://www.basicagency.com/contact">Bay Area - CA</a></div>
+                                    <div><a class="hover:underline" href="https://www.basicagency.com/contact">St. Louis - MO</a></div>
+                                    <div><a class="hover:underline" href="https://www.basicagency.com/contact">Amsterdam - NL</a></div>
+                                    <div><a class="hover:underline" href="https://www.basicagency.com/contact">London - EN</a></div>
+                                    <div><a class="hover:underline" href="https://www.basicagency.com/contact">Berlin - DE</a></div>
+                                    <div><a class="hover:underline" href="https://www.basicagency.com/contact">Argentina - AR</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
              </div>
-        </div>
+            </div>
+            <div class="p-5 w-full bg-customDarkGray text-footerTxt text-xs h-20 xl:h-18 list-item list-none text-center xl:flex xl:justify-between">
+                <h1>BASIC/DEPT®, Inc 10 - 24©</h1>
+                <h1>Easy to understand, impossible to ignore.™</h1>
+                <h1>Terms, Privacy Policy</h1></div>
     </footer>
 </body>
 </html>

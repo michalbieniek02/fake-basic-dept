@@ -5,8 +5,10 @@ module.exports = {
     extend: {
       colors: {
         customGray: '#252422',
+        customDarkGray: '#191918',
         darkBg: '#272724',
-        darkTxt: '#F9CDCD'
+        darkTxt: '#F9CDCD',
+        footerTxt: '#575757'
       },
     },
   },
