@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+section{
+  transition: background-color 0.5s, color 0.2s;
+}
 
 .custom-shadow:hover {
   color: white;
